@@ -76,7 +76,7 @@ y [http://localhost:3000/admin](http://localhost:3000/admin) para el panel.
 |---|---|---|
 | `DATABASE_URL` | Si | Conexión a PostgreSQL. Formato `postgresql://usuario:password@host:puerto/basededatos` |
 | `SESSION_SECRET` | Si | Clave para firmar la cookie de sesión del admin. Generala con `openssl rand -base64 32` y no la compartas. |
-| `NEXT_PUBLIC_WHATSAPP_NUMBER` | Si | Número de WhatsApp de la tienda en formato internacional sin "+" ni espacios (ej. `5491122334455`). |
+| `NEXT_PUBLIC_WHATSAPP_NUMBER` | Si | Número de WhatsApp de la tienda en formato internacional sin "+" ni espacios: código de país + número sin el 0 inicial (ej. Paraguay `0972752804` → `595972752804`). |
 | `ADMIN_EMAIL`, `ADMIN_PASSWORD` | No | Solo se usan al correr `npm run db:seed` la primera vez, para fijar el email/contraseña del admin inicial en vez de usar los valores por defecto. |
 | `NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME`, `NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET` | No | Si se completan, el panel admin permite subir imágenes de producto directo desde el navegador. Ver [Cloudinary](#imagenes-de-producto-cloudinary-opcional). |
 
