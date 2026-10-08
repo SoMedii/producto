@@ -21,7 +21,7 @@ export function buildWhatsAppOrderUrl(items: CartItem[], siteUrl?: string) {
   const total = items.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
   const lines = [
-    "Hola! Quiero hacer este pedido en Fee Store:",
+    "Hola! Quiero hacer este pedido en Figgi Store:",
     "",
     ...items.map(
       (item) =>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useActionState } from "react";
+import Image from "next/image";
 import { loginAction } from "@/app/admin/actions";
 
 export default function AdminLoginPage() {
@@ -9,8 +10,9 @@ export default function AdminLoginPage() {
   return (
     <div className="flex min-h-full items-center justify-center px-4 py-16">
       <form action={action} className="w-full max-w-sm rounded-2xl border border-border bg-card p-6 shadow-sm">
+        <Image src="/logo.png" alt="Figgi Store" width={160} height={99} className="mb-4 h-14 w-auto" />
         <h1 className="text-xl font-bold">Panel de administracion</h1>
-        <p className="mt-1 text-sm text-muted">Fee Store</p>
+        <p className="mt-1 text-sm text-muted">Figgi Store</p>
 
         <div className="mt-5 flex flex-col gap-1">
           <label htmlFor="email" className="text-sm font-medium">

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { getCategories } from "@/lib/products";
 
 export default async function SiteHeader() {
@@ -7,8 +8,8 @@ export default async function SiteHeader() {
   return (
     <header className="border-b border-border bg-card">
       <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-4">
-        <Link href="/" className="text-xl font-extrabold tracking-tight">
-          Fee<span className="text-brand">Store</span>
+        <Link href="/" className="flex items-center">
+          <Image src="/logo.png" alt="Figgi Store" width={160} height={99} priority className="h-12 w-auto" />
         </Link>
         <nav className="flex flex-wrap items-center gap-4 text-sm font-medium">
           <Link href="/catalogo" className="hover:text-brand">

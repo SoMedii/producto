@@ -1,6 +1,6 @@
-# Fee Store
+# Figgi Store
 
-Sitio web de la tienda de anime **Fee Store**: catálogo de figuras, remeras,
+Sitio web de la tienda de anime **Figgi Store**: catálogo de figuras, remeras,
 tazas, stickers y más, con carrito simple que arma el pedido y lo manda por
 WhatsApp, y un panel de administración privado para cargar y editar
 productos sin tocar código.
@@ -56,7 +56,7 @@ npm run db:seed      # crea categorias, productos de ejemplo y el usuario admin
 ```
 
 El seed te va a mostrar en la consola el **email y contraseña** del
-administrador creado (por defecto `admin@feestore.local` /
+administrador creado (por defecto `admin@figgistore.local` /
 `CambiameAhora123!` si no definiste `ADMIN_EMAIL` / `ADMIN_PASSWORD`).
 Entrá a `/admin/login`, iniciá sesión y andá a "Mi cuenta" para cambiar esa
 contraseña cuanto antes.
@@ -178,7 +178,7 @@ Una combinación simple y gratuita para arrancar:
    DATABASE_URL="tu-connection-string-de-produccion" npm run db:seed
    ```
 5. Hacé deploy. Cuando el dominio gratuito de Vercel (`algo.vercel.app`)
-   esté andando, podés conectarle un dominio propio (ej. `feestore.com.ar`)
+   esté andando, podés conectarle un dominio propio (ej. `figgistore.com.ar`)
    desde *Settings → Domains* en Vercel.
 
 ## Cómo seguir actualizando el sitio a futuro

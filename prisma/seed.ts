@@ -90,7 +90,7 @@ async function main() {
     });
   }
 
-  const adminEmail = process.env.ADMIN_EMAIL ?? "admin@feestore.local";
+  const adminEmail = process.env.ADMIN_EMAIL ?? "admin@figgistore.local";
   const adminPassword = process.env.ADMIN_PASSWORD ?? "CambiameAhora123!";
 
   const adminExistente = await prisma.adminUser.findUnique({

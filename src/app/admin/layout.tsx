@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import "../globals.css";
 
 export const metadata: Metadata = {
-  title: "Panel de administracion | Fee Store",
+  title: "Panel de administracion | Figgi Store",
   robots: { index: false, follow: false },
+  icons: { icon: "/icon.png" },
 };
 
 export default function AdminRootLayout({ children }: { children: React.ReactNode }) {

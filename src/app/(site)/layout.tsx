@@ -17,9 +17,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Fee Store | Figuras, remeras y mas de anime",
+  title: "Figgi Store | Figuras, remeras y mas de anime",
   description:
-    "Fee Store: figuras, remeras, tazas, stickers y mas productos de anime. Mira el catalogo y pedi por WhatsApp.",
+    "Figgi Store: figuras, remeras, tazas, stickers y mas productos de anime. Mira el catalogo y pedi por WhatsApp.",
+  icons: { icon: "/icon.png" },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
