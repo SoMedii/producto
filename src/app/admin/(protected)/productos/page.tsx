@@ -9,15 +9,29 @@ export default async function AdminProductosPage() {
 
   return (
     <div>
-      <div className="flex items-center justify-between">
+      <div className="flex flex-wrap items-center justify-between gap-3">
         <h1 className="text-xl font-bold">Productos</h1>
-        <Link
-          href="/admin/productos/nuevo"
-          className="rounded-full bg-brand px-4 py-2 text-sm font-semibold text-white hover:bg-brand-dark"
-        >
-          + Nuevo producto
-        </Link>
+        <div className="flex items-center gap-4">
+          <a
+            href="/plantilla-productos.xlsx"
+            download
+            className="text-sm text-brand hover:underline"
+          >
+            Descargar plantilla para carga masiva
+          </a>
+          <Link
+            href="/admin/productos/nuevo"
+            className="rounded-full bg-brand px-4 py-2 text-sm font-semibold text-white hover:bg-brand-dark"
+          >
+            + Nuevo producto
+          </Link>
+        </div>
       </div>
+      <p className="mt-2 text-xs text-muted">
+        Para cargar muchos productos de una, completa la plantilla y corré{" "}
+        <code className="rounded bg-black/5 px-1 py-0.5">npm run db:import -- archivo.xlsx</code>{" "}
+        desde la terminal del proyecto.
+      </p>
 
       <div className="mt-6 overflow-x-auto">
         <table className="w-full min-w-[640px] border-collapse text-sm">

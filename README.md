@@ -92,6 +92,29 @@ hace desde `/admin`, **sin tocar código**:
   todavía tiene productos, para evitar perder esa relación por error).
 - **Mi cuenta**: cambiar la contraseña del admin.
 
+### Cargar muchos productos de una vez (Excel)
+
+Si tenés que cargar varios productos juntos, es más rápido usar la planilla
+que escribir cada uno a mano desde `/admin`:
+
+1. Descargá la plantilla desde `/admin/productos` ("Descargar plantilla
+   para carga masiva") o directamente en
+   [`public/plantilla-productos.xlsx`](public/plantilla-productos.xlsx).
+2. Completá una fila por producto (columnas: `nombre`, `descripcion`,
+   `precio`, `stock`, `categoria`, `imagenes`, `activo`). La hoja
+   "Instrucciones" del mismo archivo explica cada columna. Si una
+   categoría no existe todavía, se crea sola.
+3. Corré, desde la terminal en la carpeta del proyecto:
+   ```bash
+   npm run db:import -- ruta/al/archivo.xlsx
+   ```
+4. Revisá el resumen que imprime en la terminal (cuántos se crearon,
+   cuántos se actualizaron, y el detalle de cualquier fila con error).
+
+Si un producto ya existe con exactamente el mismo nombre, se **actualiza**
+en vez de duplicarse — así que esta misma planilla sirve también para
+actualizar precios/stock en lote más adelante.
+
 ### Imágenes de producto (Cloudinary, opcional)
 
 Por defecto, para poner una imagen a un producto hay que pegar la URL de una
@@ -221,4 +244,5 @@ npm run db:migrate   # crear/aplicar migraciones en desarrollo
 npm run db:deploy    # aplicar migraciones ya creadas (producción)
 npm run db:seed      # cargar categorias/productos de ejemplo y el admin
 npm run db:studio    # explorador visual de la base de datos (Prisma Studio)
+npm run db:import -- archivo.xlsx   # carga/actualiza productos en lote desde Excel
 ```
